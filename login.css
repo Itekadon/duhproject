@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to right,#d15e5e,#e7510b69,#ccbeab);
+  }
+  
+  
+/* Header and Navigation Styles */
+header {
+    background-color: #c9b3b3;
+    padding: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+  }
+  
+  
+  h1  {
+    font-size: 70px;
+    text-align: center;
+    
+  }
+  h2 {
+    font-weight: 10px;
+    font-size: 30px;
+    max-width: 90ch;
+    text-align: center;
+    color: #c00f0f;
+  }
+  
+  h3 {
+    font-size: xx-large;
+    margin-top: -10px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #c00f0f;
+   
+  }
+  
+  nav {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration:none;
+    font-size: 14pt;
+    color: #c72929;
+    font-weight : bold;
+    
+  }
+  
+  /* Main Content Styles */
+  main {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 350px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  /* Login Form Styles */
+  #login {
+      margin-bottom: 2rem;
+
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-family: Arial, sans-serif;
+  }
+  main {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #login form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 1rem;
+  }
+  
+  #login label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  
+  /* #login input[type='email']{
+   
+    width: 300px;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #690e0e;
+    border-radius: 10px;
+  }
+  
+  
+  #login input[type='password']{
+      width: 150px;
+      padding: .5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #690e0e;
+      border-radius: 10px;  
+  } */
+      
+ /* #login input[type='first_name'] {
+  width: 300px;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #690e0e;
+    border-radius: 10px;
+ }
+
+    #login input[type='last_name'] {
+      width: 300px;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #690e0e;
+        border-radius: 10px;
+    }
+       */
+
+
+
+#login input {
+
+ width: 300px;
+padding: .5rem;
+margin-bottom: 1rem;
+border: 1px solid #690e0e;
+border-radius: 10px;
+
+}
+
+
+  #login button {
+    display: block;
+    width: 100px;
+    padding: .7rem;
+    background-color: #c00f0f;
+    color: white;
+    border : none;
+    cursor: pointer;  
+    font-size: 20px;
+    border-radius: 10px;
+    
+    
+  }
+  
+  #login button:hover {
+    background-color: #1d924e;
+  }
+  
+  /* Call to Action Styles */
+  .call-to-action {
+    background-color: #e9ecef;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .call-to-action h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #content {
+      font-family: Arial, sans-serif; /* Setting the font family */
+      text-align: justify; /* Aligning the text */
+  }
+  
+  article {
+      max-width: 600px; /* Setting maximum width for better readability */
+      margin: 0 auto; /* Centering the content horizontally */
+  }
+  
+  ul {
+      list-style-type: disc; /* Setting the bullet style */
+      margin-left: 20px; /* Adding some indentation */
+  }
+  
+  li {
+      margin-bottom: 5px; /* Adding space between list items */
+  }
+  
+  
+  
+  
+  /* Footer Styles */
+  footer {
+    background-color: #e4c1c1;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+
+  }
+  
+  footer p {
+    margin-bottom: .5rem;
+  }

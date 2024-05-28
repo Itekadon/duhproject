@@ -1,0 +1,72 @@
+
+body {
+    font-family: 'Edu+TAS+Beginner', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-family: 'Edu+TAS+Beginner', sans-serif;
+
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Shadows', sans-serif;
+
+}
+
+
+header {
+    background-color:powderblue;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+   
+    
+
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+
+main {
+    padding: 20px;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: powderblue;
+}
+
+
+footer {
+    background-color:powderblue;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Shadows+Into+Light&display=swap" );

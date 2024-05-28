@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">101 Essays That Will Change The Way You Think</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Brianna Wiest</h3>
+
+    <br>
+    <p>Over the past few years, Brianna Wiest has gained renown for her deeply moving, philosophical writing. This new compilation of her published work features pieces on why you should pursue purpose over passion, embrace negative thinking, see the wisdom in daily routine, and become aware of the cognitive biases that are creating the way you see your life. Some of these pieces have never been seen; others have been read by millions of people around the world. Regardless, each will leave you thinking: this idea changed my life. </p>
+    <br>
+    <p id="space" style="display: inline; flex-direction: column; justify-content: space-evenly;"> Genre:<a href="16.html">Self Help</a>
+        <a href="16.html">Nonfiction</a>
+        <a href="16.html">Psychology</a>
+        <a href="16.html">Essays</a>
+        <a href="16.html">Philosophy</a>
+        <a href="16.html">Personal Development</a>
+        <a href="16.html">Mental Health</a>
+        <a href="16.html">Poetry</a>
+        <a href="16.html">Education</a>
+</p>
+    </section>
+<br><br>
+
+    <img src="books/101 Essays That Will Change The Way You Think.jpeg" height="500px" style="margin-left: 3cm;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+
+    <div class="app">
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiiiiiiiiiiiiiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':9980,
+            },
+            {
+                'star':4 ,
+                'count':3960,
+            },
+            {
+                'star':3,
+                'count':0,
+            },
+            {
+                'star':2,
+                'count':1,
+            },
+            {
+                'star':1,
+                'count':0,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

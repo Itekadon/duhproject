@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">The gateway we call death</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Nelson Russell Marion</h3>
+
+    <br>
+    <p>“Our purpose in life is to be tested, to develop faith, to make and keep sacred covenants, and, later, to leave,” writes President Russell M. Nelson, a member of the Quorum of the Twelve Apostles in The Church of Jesus Christ of Latter-day Saints. “Our ultimate and highest destiny is to return to our heavenly home. When that times comes, it can be as momentous as the time of birth. Birth is the gateway to mortal life; death is the gateway to immortality and eternal life.” In The Gateway We Call Death, President Nelson, a surgeon by profession and now a special witness of the name of the Lord Jesus Christ, approaches the subject of death from both a medical and a theological point of view to discuss such topics as The purpose of life and of death The purpose of mourning When death comes without warning Factors of choice, such as suicide, euthanasia, and use of mechanical means to extend life Life after death “As I have come to comprehend more about life in all of its phases,” President Nelson writes, “I no longer feel that death is always that foe to be feared. Instead, I view it as a potential friend to be understood.” The Gateway We Call Death provides reassurance and comfort for all who seek such understanding. </p>
+    <br>
+    <p id="space"> Genre:<a href="11.html">Lds</a>
+        <a href="11.html">Church</a>
+        <a href="11.html">Religion</a>
+        <a href="11.html">Nonfiction</a>
+        <a href="11.html">Theology</a>
+        <a href="11.html">Inspirational</a>
+    </p>
+    </section>
+<br><br>
+
+    <img src="books/the gateway we call death.jpeg" height="500px" style="margin-left: 3cm; " alt="">
+
+ <section id="left">
+    <!-- ratings -->
+
+    <div class="app">
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiiiiiiiiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':9980,
+            },
+            {
+                'star':4 ,
+                'count':300,
+            },
+            {
+                'star':3,
+                'count':50,
+            },
+            {
+                'star':2,
+                'count':1,
+            },
+            {
+                'star':1,
+                'count':0,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

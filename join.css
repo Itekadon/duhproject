@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to right,#d15e5e,#e7510b69,#ccbeab);
+  
+  }
+/* Header and Navigation Styles */
+header {
+    background-color: #c9b3b3;
+    padding: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+  }
+
+  h1  {
+    font-size: 70px;
+    text-align: center;
+    
+    
+  }
+  h2 {
+    font-weight: 10px;
+    
+    font-size: 30px;
+    max-width: 90ch;
+    text-align: center;
+  }
+  nav {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration:none;
+    font-size: 14pt;
+    color: #c72929;
+    font-weight : bold;
+    
+  }
+
+
+
+/* Style the form container */
+#memberProfileForm {
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the form labels */
+  #memberProfileForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Style the form inputs */
+  #memberProfileForm input,
+  #memberProfileForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: solid;
+  
+  }
+  
+  /* Style the submit button */
+  #memberProfileForm button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the agreement label */
+  #memberProfileForm label[for="agree"] {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the agreement checkbox */
+  #memberProfileForm #agree {
+    margin-right: 10px;
+  }
+  
+  /* Style the link within the agreement label */
+  #memberProfileForm #agree a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  /* Style the link hover state */
+  #memberProfileForm #agree a:hover {
+    text-decoration: underline;
+
+  }
+  

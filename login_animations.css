@@ -1,0 +1,62 @@
+/* Header Animation */
+header {
+    background-image: url('pink\ sky.jpg'); 
+    background-size: cover; 
+    background-position: bottom; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    padding: 40px; /* Add padding to the header content */
+}
+
+header .website-name h1 {
+    font-size: 70px;
+    text-align: center;
+    animation: fadeIn 3s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Login Form Animation */
+#login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    animation: slideInLeft 3s ease; /* Add slide-in animation */
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Register Section Animation */
+#register {
+    text-align: center;
+    animation: fadeInUp 3s ease; /* Add fade-in-up animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

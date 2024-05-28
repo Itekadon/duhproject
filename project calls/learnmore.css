@@ -1,0 +1,51 @@
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to right,#d15e5e,#e7510b69,#ccbeab);
+  
+}
+img{
+    
+    margin-bottom: 3cm;
+}
+.website-name{
+    font-size: 75px;
+    text-align: center;
+    color: rgb(173, 11, 11);
+    font-family: comic sans;
+}
+#btn{
+    width: 100%;
+    padding: 12px;
+    background:#df3131;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#btn:hover{
+    background: #d15e5e;
+}
+#right{
+    display: inline-block;
+    margin-top: 3cm;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+ }
+ ::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+ }
+ ::-webkit-scrollbar-thumb{
+    background: rgb(161, 10, 231);
+    border-radius: 10px;
+ }

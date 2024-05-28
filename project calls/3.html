@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">Grown and Flown</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Lisa Heffernan, Lisa Endlich and Mary Dell Harrington</h3>
+
+    <br>
+    <p>
+        <div style="font-weight: 1000;">PARENTING NEVER ENDS.</div>
+
+        From the founders of the #1 site for parents of teens and young adults comes an essential
+         guide for building strong relationships with your teens and preparing them to successfully launch into adulthoodThe high school and college years: an extended roller coaster of academics, friends, first loves, first break-ups, driver’s ed,
+         jobs, and everything in between. Kids are constantly changing and how we parent them must change, too. But how do we stay close as
+        a family as our lives move apart? Enter the co-founders of Grown and Flown, Lisa Heffernan and Mary Dell Harrington. In the midst of guiding their own kids through 
+        this transition, they launched what has become the largest website and online community for parents of fifteen to twenty-five year olds. Now they’ve compiled new takeaways and fresh insights from all that they’ve learned into this handy, must-have guide.
+        GROWN AND FLOWN is a one-stop resource for parenting teenagers, leading up to―and through―high school and those first years of 
+        independence. It covers everything from the monumental (how to let your kids go) to the mundane (how to shop for a dorm room). 
+        Organized by topic―such as academics, anxiety and mental health, college life―it features a combination of stories, advice from
+         professionals, and practical sidebars.Consider this your parenting lifeline: an easy-to-use manual that offers support and perspective. GROWN AND FLOWN is required reading
+         for anyone looking to raise an adult with whom you have an enduring, profound connection.</p>
+    <br>
+    <p id="space"> Genre:
+         <a href="3.html">Self Discovery</a>
+        <a href="3.html">Parenting</a>
+        <a href="3.html"> Adult</a>
+        <a href="3.html"> Self Help</a>
+        <a href="3.html"> Family</a>
+        <a href="3.html"> Education</a>
+        </p>
+    </section>
+
+<br><br>
+    <img src="books/grown&flown.jpeg" height="500px" style="margin-left: 3cm;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+    <br><br><br><br>
+    <div class="app" >
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':980,
+            },
+            {
+                'star':4 ,
+                'count':3333,
+            },
+            {
+                'star':3,
+                'count':250,
+            },
+            {
+                'star':2,
+                'count':70,
+            },
+            {
+                'star':1,
+                'count':0,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

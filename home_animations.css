@@ -1,0 +1,58 @@
+/* Parallax Effect for Header */
+header {
+    background-image: url('Images/Pushing\ bicyle.jpeg'); /* Initial background image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    animation: backgroundSlide 20s infinite;
+}
+
+@keyframes backgroundSlide {
+    0%, 20% { background-image: url('Images/Father\ and\ son.jpeg'); }
+    25%, 45% { background-image: url('Images/Father\ and\ daughter.jpeg'); }
+    50%, 70% { background-image: url('Images/Father\ and\ son\ at\ the\ beach.jpeg'); }
+    75%, 95% { background-image: url('Images/Father\ and\ daughter\ forest.jpeg'); }
+}
+
+header h1 {
+    font-size: 5em;
+    text-align: center;
+    padding-top: 20vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Hover Effect for Testimonials */
+#testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+

@@ -1,0 +1,267 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  background: linear-gradient(to right,#d15e5e,#e7510b69,#ccbeab);
+}
+
+
+.image-gallery {
+  display:flex;
+  overflow: hidden;
+  width: 95%;
+
+}
+.image-gallery img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+.image-container{
+  flex-shrink: 0;
+  margin-right: 20px;
+  transition: transform 5s ease-in-out; 
+}
+.image-container p {
+  margin-top: 5px;
+  font-size: larger;
+  font-weight: bold;
+
+}
+
+.image-container img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+    transform: translateX(-100%);
+    }
+    100% {
+    transform: translateX(100%);
+    }
+}
+
+
+
+
+/* Header and Navigation Styles */
+header {
+  background-color: #c9b3b3;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h1  {
+  font-size: 75px;
+  text-align: center;
+  color: rgb(173, 11, 11);
+  font-family: comic sans;
+  
+}
+h2 {
+  font-weight: 10px;
+  color: brown;
+  font-size: 30px;
+  max-width: 90ch;
+  text-align: center;
+}
+
+h3 {
+  font-size: xx-large;
+  margin-top: -10px;
+  
+  
+ 
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+/* Navigation Styles */
+.navigation-links a {
+  text-decoration: none;
+  font-size: 18pt;
+  color: #c72929;
+  font-weight: bold;
+  position: relative; /* Ensure positioning context */
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out; /* Add smooth transition */
+  z-index: 1; /* Ensure links are above other content */
+  border: 5px outset rgb(211, 211, 255);
+  background-color: none;
+}
+
+/* Add pop-up effect on hover */
+.navigation-links a:hover {
+  transform: translateY(-5px); /* Move the link upward */
+  z-index: 2; /* Increase z-index to bring link forward */
+}
+
+
+/* Main Content Styles */
+main {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+ #content {
+  /* border: 10px solid #4CAF50; 
+  border-radius: 10px; Rounded border */
+  padding: 20px;
+  font-family: Arial, sans-serif;  
+  text-align: justify;
+  
+    }
+
+
+
+#moreContent{
+  display: none;
+}
+  /* Style for the "Show More" button */
+  .show-more-button {
+    background-color: #eb0c0c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  /* Hover effect for the button */
+  .show-more-button:hover {
+    background-color: #45a049;
+  }
+ 
+  /* READ ALOUD BUTTON */
+
+  .ReadAloud {
+    font-size: large;
+      display: inline-block;
+      text-decoration: none;
+      background-color: #f52f2f;
+      border: none;
+      border-radius: 10px;
+      padding: 3px 15px;
+      color: rgb(207, 187, 187);
+  }
+
+.button {
+  
+font-size: large;
+display: inline-block;
+text-decoration: none;
+background-color: #f52f2f;
+border: none;
+border-radius: 10px;
+padding: 3px 15px;
+color: rgb(207, 187, 187);
+}
+
+   
+
+
+
+
+
+article {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px; 
+}
+
+li {
+    margin-bottom: 5px; 
+}
+
+h3 {
+    color: #333; 
+}
+
+p {
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+}
+
+
+.right-image {
+    float: right;
+    margin-left: 20px; 
+    max-width: 40%; 
+    height: auto; 
+    box-shadow: 0 0 100px 5px rgba(0, 0, 0, 0.3); 
+    
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #e4c1c1;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin-bottom: .5rem;
+}
+
+.fa-whatsapp{
+  font-size: 70px;
+  color: green;
+  margin-left: 100%;
+}
+
+@keyframes popUp {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.con {
+  animation: popUp 5s ease-in-out forwards;
+}
+.fa-circle-envelope{
+  font-size: 70px;
+  color: red; /* Change the color to red for better visibility */
+  margin-left: 10px; /* Adjust the margin for better alignment */
+}
+.con a {
+  color: green;
+  margin-right: 10px;
+  font-size: 40px;
+}
+.con a:hover {
+  animation: popUp 0.5s ease-in-out forwards;
+}

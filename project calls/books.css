@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
+
+body{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 40;
+    font-style: normal;
+    background-color:  whitesmoke;
+    color: black;
+
+  }
+
+.container{
+display: flex;
+justify-content: right;
+}
+
+#content{
+    margin-right:2cm;
+    padding: 10px 20px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    float: right;
+    background:  #fff;
+    text-decoration: solid  rgb(125, 17, 212);
+    border-radius: 30px;
+    border: solid 2px  #7d11d4;
+    box-shadow:0 10px 250px  #7d11d4 ;
+  }
+#content:hover input{
+    width: 400px;
+}
+#content input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.website-name{
+    font-size: 75px;
+    text-align: center;
+    color: rgb(165, 84, 202);
+    font-family: comic sans;
+}
+
+#choice{
+    height: 1.4cm;
+    font-weight: bold;
+    border-radius: 30px;
+    
+}
+
+img{
+    width: 150px;
+    padding-top: 0.5cm;
+}
+#All{
+   width: 100%;
+   height: 100vh;
+   padding: 70px 0;
+}
+#All h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+h2{
+    margin: 12px;
+}
+#All .featured_book_box{
+    float: right;
+    padding-right: 2cm;
+    display: flex;
+    margin-bottom: 1cm;
+    
+}
+
+.featured_book_box:hover{
+transform: scale(1.1);
+z-index: 2;
+}
+
+.featured_book_card{
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid  #7d11d4;
+    border-radius: 10px;
+    margin-bottom: 1cm;
+    margin: auto 20px;
+
+}
+.featured_book_card:hover{
+    box-shadow: 0 0 10px hsl(263, 96%, 48%);
+        background: #e1d2ec;
+    
+    
+}
+.writer{
+color: gray;
+}
+.name{
+    color: rgb(180, 11, 152);
+    margin-top: 8px;
+}
+.book_price{
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+sub{
+    font-weight: 100;
+    padding: 0 5px;
+}
+.f_btn{
+    padding:  8px 20px;
+    border: 2px solid  #7d11d4;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.f_btn:hover{
+    background-color: white;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(161, 10, 231);
+    border-radius: 10px;
+}
+#btn{
+    border: none;
+    background: white;
+}

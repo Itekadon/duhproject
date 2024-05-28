@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">The Whole-Brain Child 12 Revolutionary Strategies to Nurture Your Child's Developing Mind</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Daniel J. Siegel and Tina Payne Bryson</h3>
+
+    <br>
+    <p>Your toddler throws a tantrum in the middle of a store. Your preschooler refuses to get dressed. Your fifth-grader sulks on the bench instead of playing on the field. Do children conspire to make their parents’ lives endlessly challenging? No—it’s just their developing brain calling the shots!
+
+        In this pioneering, practical book, Daniel J. Siegel, neuropsychiatrist and author of the bestselling Mindsight, and parenting expert Tina Payne Bryson demystify the meltdowns and aggravation, explaining the new science of how a child’s brain is wired and how it matures. The “upstairs brain,” which makes decisions and balances emotions, is under construction until the mid-twenties. And especially in young children, the right brain and its emotions tend to rule over the logic of the left brain. No wonder kids can seem—and feel—so out of control. By applying these discoveries to everyday parenting, you can turn any outburst, argument, or fear into a chance to integrate your child’s brain and foster vital growth. Raise calmer, happier children using twelve key strategies, including
+         
+        • Name It to Tame It: Corral raging right-brain behavior through left-brain storytelling, appealing to the left brain’s affinity for words and reasoning to calm emotional storms and bodily tension.
+        • Engage, Don’t Enrage: Keep your child thinking and listening, instead of purely reacting.
+        • Move It or Lose It: Use physical activities to shift your child’s emotional state.
+        • Let the Clouds of Emotion Roll By: Guide your children when they are stuck on a negative emotion, and help them understand that feelings come and go.
+        • SIFT: Help children pay attention to the Sensations, Images, Feelings, and Thoughts within them so that they can make better decisions and be more flexible.
+        • Connect Through Conflict: Use discord to encourage empathy and greater social success.
+         
+        Complete with clear explanations, age-appropriate strategies for dealing with day-to-day struggles, and illustrations that will help you explain these concepts to your child, The Whole-Brain Child shows you how to cultivate healthy emotional and intellectual development so that your children can lead balanced, meaningful, and connected lives.</p>
+    <br>
+    <p id="space" style="flex-direction: column; display: inline; justify-content: space-evenly;"> Genre:<a href="13.html">Parenting</a>
+        <a href="13.html">Nonfiction</a>
+        <a href="13.html">Psychology</a>
+        <a href="13.html">Self Help</a>
+        <a href="13.html">Childrens</a>
+        <a href="13.html">Family</a>
+        <a href="13.html">Science</a>
+        <a href="13.html">Teaching</a>
+        <a href="13.html">Counselling</a>
+</p>
+    </section>
+<br><br>
+
+    <img src="books/the whole brain child.jpeg" height="500px" style="margin-left: 3cm; margin-top: 4cm;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="app">
+        
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiiiiiiiiiiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':80,
+            },
+            {
+                'star':4 ,
+                'count':0,
+            },
+            {
+                'star':3,
+                'count':0,
+            },
+            {
+                'star':2,
+                'count':0,
+            },
+            {
+                'star':1,
+                'count':1,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

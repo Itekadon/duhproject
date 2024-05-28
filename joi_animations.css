@@ -1,0 +1,66 @@
+/* Input Field Animations */
+#memberProfileForm input:focus {
+    border-color: #4CAF50; /* Change border color when focused */
+    transition: border-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Button Hover Animation */
+#memberProfileForm button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+#memberProfileForm button[type="submit"]:hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+
+/* Header Animation */
+header {
+    background-image: url('pink\ sky.jpg');
+    background-size: cover; /* Ensure the background image covers the entire header */
+    background-position:bottom; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    padding: 40px; /* Add padding to the header content */
+}
+
+header h1 {
+    font-size: 70px;
+    text-align: center;
+    animation: fadeIn 5s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form Container Animation */
+#memberProfileForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    animation: fadeInUp 1s ease; /* Add fade-in-up animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

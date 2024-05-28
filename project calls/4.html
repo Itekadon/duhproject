@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">How to Talk so Kids Will Listen & Listen So Kids Will Talk</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Adele Faber & Elaine Mazlish</h3>
+
+    <br>
+    <p>Here is the bestselling book that will give you the know-how you need to be effective with your children. Enthusiastically praised by 
+        parents and professionals around the world, the down--to--earth, respectful approach of Faber and Mazlish 
+        makes relationships with children of all ages less stressful and more rewarding.
+        Recently revised and updated with fresh insights and suggestions, How to Talk so Kids Will Listen & Listen 
+        so Kids Will Talk is full of practical, innovative ways to solve common problems and build foundations for lasting relationships.</p>
+    <br>
+    <p id="space"> Genre:<a href="4.html"> Psychology</a>
+        <a href="4.html"> Self Help</a>
+        <a href="4.html">  Education</a>
+        <a href="4.html"> Childrens</a>
+        <a href="4.html"> Parenting</a>
+        <a href="4.html">Family</a>
+        <br><br>
+        <div style="display: flex; gap: 1cm;">
+        <a href="4.html"> Communication</a>
+        <a href="4.html"> Teaching</a>
+    </div>
+        </p>
+    </section>
+
+
+    <img src="books/how to talk so children will listen.jpeg" height="450px" style="margin-left: 3cm; margin-top: 2cm ;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+
+    <div class="app">
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':80,
+            },
+            {
+                'star':4 ,
+                'count':300,
+            },
+            {
+                'star':3,
+                'count':750,
+            },
+            {
+                'star':2,
+                'count':70,
+            },
+            {
+                'star':1,
+                'count':0,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

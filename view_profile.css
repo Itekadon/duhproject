@@ -1,0 +1,103 @@
+Basic styles for the body and general text
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for the profile details */
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile picture styling */
+.profile-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for the profile information */
+.profile-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.profile-details p strong {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    color: #555;
+}
+
+
+
+
+/* Styles for the header */
+header.container {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* header .website-name h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+} */
+
+header .navigation-links nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header .navigation-links nav ul li {
+    display: inline;
+}
+
+header .navigation-links nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .navigation-links nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Additional responsive design */
+@media (max-width: 600px) {
+    .profile-details p strong {
+        display: block;
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">A Gentle Reminder</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Bianca Sparacino</h3>
+
+    <br>
+    <p>A gentle reminder, for the days you feel light in this world, and for the days in which the sun rises a little slower.
+         A gentle reminder for when your heart is full of hope, and for when you are learning how to heal it. A gentle reminder 
+         for when you finally begin to trust in the goodness, and for when you need the kind of words that hug your broken pieces 
+         back together. A gentle reminder for when growth hangs heavy in the air, for when you need to tuck your strength into your
+          bones just to make it to tomorrow. A gentle reminder for when you are balancing the messiness, and the beauty, of what it 
+          means to be human, when you are teaching yourself that it is okay to be both happy and sad, that you are real, not perfect
+          . A gentle reminder for when you seek the words you needed when you were younger. A gentle reminder for when you need to he
+          ar that you deserve to be loved the way you love others. A gentle reminder for when you need to recognize that you are not 
+          your past, that you are not your faults. A gentle reminder for when you need to believe in staying soft, in continuing to b
+          e the kind of person who cares. A gentle reminder for when you need to believe in loving deeply in a world that sometimes f
+          ails to do so. A gentle reminder to keep going. A gentle reminder to hope.
+        A gentle reminder, for you.
+        Take what you need.</p>
+    <br>
+    <p id="space"> Genre:
+        
+        <a href="#">Poetry</a>
+        <a href="#">Self Help</a>
+        <a href="#">Nonfiction</a>
+        <a href="#">Love</a>
+        <a href="#">Romance</a>
+        <a href="#">Mental Health</a>
+       <div style="display: flex; justify-content: space-between;">
+        <a href="#">Psychology</a>
+        <a href="#">Personal Development</a>
+        <a href="#">Inspirational</a>
+        <a href="#">Spirituality</a>
+       </div>
+        
+    </p>
+    </section>
+<br><br>
+
+    <img src="books/A Gentle Reminder by Bianca Sparacino Paperback _ Indigo Chapters.jpeg " height="500px" style="margin-left: 3cm;margin-top: 1cm;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+<br>
+    <div class="app">
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="i.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':9480,
+            },
+            {
+                'star':4 ,
+                'count':39630,
+            },
+            {
+                'star':3,
+                'count':20050,
+            },
+            {
+                'star':2,
+                'count':1100,
+            },
+            {
+                'star':1,
+                'count':120,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:whitesmoke;
+    color: #333;
+    line-height: 1.6;
+  }
+/* Header and Navigation Styles */
+header {
+    background-color: #c9b3b3;
+    padding: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+  }
+
+  h1  {
+    font-size: 70px;
+    text-align: center;
+    
+    
+  }
+  h2 {
+    font-weight: 10px;
+    
+    font-size: 30px;
+    max-width: 90ch;
+    text-align: center;
+  }
+  nav {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration:none;
+    font-size: 14pt;
+    color:white;
+    font-weight : bold;
+    
+  }
+
+  p{
+    font-size: 15px;
+    text-align: center;
+
+  }
+  
+#therapist_img{
+  border-radius: 100px;
+
+}
+#nanny_img{
+  border-radius: 100px;
+  
+
+}
+#books_img{
+  border-radius: 100px;
+  height:180px;
+}
+#dating_img{
+  border-radius: 100px;
+
+}
+#resources{
+  text-align: center;
+
+}
+#resources {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.image-container a {
+  display: inline-block;
+  text-align: center;
+  margin: 0 90px;
+}
+
+.image-container img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+.image-container h4 {
+  margin: 5px 0 0;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.slider {
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.image_container{
+  margin-top: 3cm;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1cm;
+  margin-bottom: 2cm;
+}
+
+footer{
+  color: white;
+  background-color: rgb(6, 6, 32);
+}

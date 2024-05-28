@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">The Sunshine Mind 100 Days to Finding the Hope and Joy You</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Tanya Rad</h3>
+
+    <br>
+    <p>The Sunshine Mind is your guide to finding hope and joy in every day and embracing the beautiful person God made you to be.
+        As modern women living and working in LA, Tanya Rad and Raquelle Stevens know what it's like to feel overwhelmed by trying to keep up, develop real relationships, pursue life passions, and hear from God at the same time. Real, honest, and shared from personal experience, Tanya and Raquelle wrote The Sunshine Mind with today's woman on their hearts. Each of the 100 inspiring readings offers faith, hope, strength, and peace to encourage you to become the beautiful person God made you to be. Through short encouraging readings on how to become less obsessed with perfection, seek validation from God rather than others, see negative circumstances as new opportunities, and more, you'll learn to . . . Leave anxiety and stress behind, find a better way to conquer your struggles, and create a life of peace and joy with The Sunshine Mind . </p>
+    <br>
+    <p id="space"> Genre:<a href="12.html">Self Help</a>
+        <a href="12.html">Nonfiction</a>
+        <a href="12.html">Christian</a>
+        <a href="12.html">Spirituality</a>
+        <a href="12.html">Mental Health</a>
+ </p>
+    </section>
+<br><br>
+
+    <img src="books/THE SUNSHINE MIND.jpg" height="500px" style="margin-left: 3cm;" alt="">
+
+ <section id="left">
+    <!-- ratings -->
+
+    <div class="app">
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiiiiiiiiiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':1300,
+            },
+            {
+                'star':4 ,
+                'count':300,
+            },
+            {
+                'star':3,
+                'count':50,
+            },
+            {
+                'star':2,
+                'count':0,
+            },
+            {
+                'star':1,
+                'count':0,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

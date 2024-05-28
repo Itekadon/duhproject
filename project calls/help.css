@@ -1,0 +1,59 @@
+#selection{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin-top: 4cm;
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 7cm;
+    height: 1cm;
+    border: none ;
+    font-size: large;
+    border-radius: 40px;
+}
+button:hover{
+    color: #ccbeab;
+    background-color: #d15e5e;
+}
+body
+{
+    
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to right,#d15e5e,#e7510b69,#ccbeab);
+     
+      
+}
+#division{
+    margin-top: 5cm;
+}
+.personal-info{
+   border:5px solid  #d15e5e ;
+   background: #f4f4f4;
+   height: 7cm;
+   display: flex;
+   flex-direction: row;
+}
+.personal-info button{
+    margin-top: 5.7cm;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+ }
+ ::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+ }
+ ::-webkit-scrollbar-thumb{
+    background: rgb(161, 10, 231);
+    border-radius: 10px;
+ }

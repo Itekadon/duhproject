@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnmore.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Book Info</title>
+</head>
+<body>
+
+    <header> 
+        <span style="color: #7d11d4;" class="website-name"> DadsUnityHub</span>
+    </header>
+
+    <section id="right">
+
+    <h2 style="font-weight: 1000;">It's OK That You're Not OK Meeting Grief and Loss in a Culture That Doesn't Understand</h2>
+    <br>
+    <br>
+    <h3 style="font-weight: 1000;">Megan Devine</h3>
+
+    <br>
+    <p>
+        <div  style="font-weight: 1000;">A New Resource for Those Experiencing Loss</div>
+<br>
+        With It’s OK That You’re Not OK, Megan Devine offers a profound new approach to both the experience of grief and the way we help others who have endured tragedy. Having experienced grief from both sides―as both a therapist and as a woman who witnessed the accidental drowning of her beloved partner―Megan writes with deep insight about the unspoken truths of loss, love, and healing. She debunks the culturally prescribed goal of returning to a normal, "happy" life, replacing it with a far healthier middle path, one that invites us to build a life alongside grief rather than seeking to overcome it.
+        
+        On this unabridged audio recording read by the author, Megan offers stories, research, life tips, and creative and mindfulness-based practices to guide us through an experience we all must face. With Megan’s gentle but direct guidance, you’ll
+        
+        • Why well-meaning advice, therapy, and spiritual wisdom so often end up making it harder for people in grief
+        • How challenging the myths of grief―doing away with stages, timetables, and unrealistic ideals about how grief should unfold―allows us to accept it as a mystery to be honored instead of a problem to solve
+        • Practical guidance for managing stress, improving sleep, and decreasing anxiety without trying to "fix" your pain
+        
+        Many people who have suffered a loss feel judged, dismissed, and misunderstood by a culture that wants to "solve" grief. Megan writes, "Grief no more needs a solution than love needs a solution." It’s OK That You’re Not OK is a book for grieving people, those who love them, and all those seeking to love themselves―and each other―better.</p>
+    <br>
+    <p id="space" style="flex-direction: column; display: inline;gap: 1cm;"> Genre:<a href="5.html">Self Help</a>
+        <a href="5.html">Mental Helth</a>
+        <a href="5.html"> Personal Development</a>
+         <a href="5.html">Social Work</a>
+        <a href="5.html"> Counselling</a>
+        <a href="5.html">  Death</a>
+       
+        </p>
+    </section>
+
+
+    <img src="books/its ok that youre not ok.jpeg" height="500px" style="margin-left: 3cm; margin-top:5cm;" alt="">
+    <br><br><br><br><br><br><br><br>
+ <section id="left">
+    <!-- ratings -->
+
+    <div class="app">
+       
+        <div class="write_review">
+               <span style="color: gold;"> &#9733  &#9733  &#9733  &#9733  &#9733</span> 
+            <br>
+            <a  href="review.php">Write a review</a>
+        </div>
+        <div class="rating">
+            <div class="rating_average">
+           
+                <span style="color: whitesmoke;">RATING AVERAGE</span>
+                <h1>4.5</h1>
+                <div class="star-outer">
+                    <div class="star-inner"></div>
+                </div>
+                
+                <p>290,291</p>
+            </div>
+            <div class="rating_progress">      
+            </div>
+        </div>
+    </div>
+    
+</section>
+    
+        <!-- ratings end code -->
+
+    <a  target="_blank" href="iiiii.html"><button  style="width: 5cm;" id="btn" >Read Book</button></a>
+
+
+
+
+
+
+
+    <script>
+            
+            let data=[
+            {
+                'star':5,
+                'count':80,
+            },
+            {
+                'star':4 ,
+                'count':33,
+            },
+            {
+                'star':3,
+                'count':23,
+            },
+            {
+                'star':2,
+                'count':11,
+            },
+            {
+                'star':1,
+                'count':3,
+            }
+         ]
+
+let total_rating =0,
+rating_based_on_stars=0;
+
+data.forEach(rating => {
+total_rating += rating.count;
+rating_based_on_stars += rating.count * rating.star;
+});
+
+data.forEach(rating => {
+
+    let rating_progress = `
+    <div class="rating_progress-value">
+                <p>${rating.star} <span class="star">&#9733;</span></p>
+                <div class="progress">
+                    <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                </div>
+                <p>${rating.count.toLocaleString()}</p>
+            </div>
+    `;
+    document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+});
+let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+document.querySelector('.rating_average h1').innerHTML = rating_average;
+document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+document.querySelector('.star-inner').style.width = (rating_average / 5)*100  + "%"; 
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<section id="login">
+            <h2>Member Login</h2>
+
+            <form>
+                <div class="form-group"> 
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+            
+                    <button type="submit">Login</button><br>
+
+
+                    <a href="#lost-password">Lost Password</a>
+                </div>
+                
+            </form> 
+        </section>  
+
+        <section id="register">
+            <h2>New Member?<li><a href="http://127.0.0.1:5500/join.html">Join Now!</a></li> </h2><br>       
+        </section>
+        <section id="register">
+            <h2> <a href="payment.html">Premium membership</a></h2>
+        </section>
